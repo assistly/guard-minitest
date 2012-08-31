@@ -64,8 +64,6 @@ module Guard
           else
             cmd_parts << '-e \'::GUARD_NOTIFY=false\''
           end
-          cmd_parts << 'test/test_helper.rb' if File.exist?('test/test_helper.rb')
-          cmd_parts << 'spec/spec_helper.rb' if File.exist?('spec/spec_helper.rb')
           paths.each do |path|
             cmd_parts << "./#{path}"
           end
